@@ -1,6 +1,6 @@
 #pragma once
 #include <fstream>
-#include "number.h"
+#include <number.h>
 
 namespace MyLib
 {

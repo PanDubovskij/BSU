@@ -2,20 +2,20 @@
 
 build_number(){
     echo "BUIDLING NUMBER"
-    g++ -c Number/number.cpp -o build/number.o
+    g++ -c Number/number.cpp -o build/number.o -fPIC
     ar rvs build/number.a build/number.o
     echo "BUIDLING NUMBER DONE"
 }
 
 build_vector(){
     echo "BUIDLING VECTOR"
-    g++ -c -INumber Vector/vector.cpp -o build/vector.o
-    g++ -shared -o build/libVector.so build/vector.o build/number.a
+    g++ -c -INumber Vector/vector.cpp -o build/vector.o -fPIC
+    g++ -shared -o build/libVector.so build/vector.o build/number.a -fPIC
     echo "BUIDLING VECTOR DONE"
 }
 build_app(){
     echo "BUIDLING TEST"
-    g++ -o build/main Test/main.cpp -INumber -IVector build/libVector.so build/number.a
+    g++ -o build/main Test/main.cpp -INumber -IVector build/libVector.so build/number.a -fPIC
     echo "BUIDLING TEST DONE"
 }
 
