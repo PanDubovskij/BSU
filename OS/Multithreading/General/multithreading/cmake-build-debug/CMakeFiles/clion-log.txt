@@ -1,0 +1,4 @@
+D:\programs\JetBrains\Toolbox\apps\CLion\ch-0\213.6777.58\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/programs/JetBrains/Toolbox/apps/CLion/ch-0/213.6777.58/bin/ninja/win/ninja.exe -G Ninja D:\programs\JetBrains\Toolbox\projects_clion\multithreading
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/programs/JetBrains/Toolbox/projects_clion/multithreading/cmake-build-debug

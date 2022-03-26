@@ -1,0 +1,18 @@
+# ninja log v5
+4	578	6700215407963091	CMakeFiles/multithreading.dir/main.cpp.obj	39fbfff487f68ea9
+579	765	6700215409903892	multithreading.exe	3846b8871372f14d
+23	138	6700215403573460	CMakeFiles/multithreading.dir/matrix.cpp.obj	e785412cfb46a4ba
+5	770	6700226566167087	CMakeFiles/multithreading.dir/Matrix.cpp.obj	4295d78523ff249
+770	954	6700226568016728	multithreading.exe	9a83af4cd6897f05
+4	719	6700226763383073	CMakeFiles/multithreading.dir/Matrix.cpp.obj	4295d78523ff249
+720	864	6700226764853688	multithreading.exe	9a83af4cd6897f05
+3	1546	6700259240751883	CMakeFiles/multithreading.dir/main.cpp.obj	39fbfff487f68ea9
+20	847	6700285799463596	CMakeFiles/multithreading.dir/main.cpp.obj	39fbfff487f68ea9
+17	820	6700302266458229	CMakeFiles/multithreading.dir/main.cpp.obj	39fbfff487f68ea9
+3	1219	6700302270439892	CMakeFiles/multithreading.dir/Matrix.cpp.obj	4295d78523ff249
+1219	1633	6700302274567132	multithreading.exe	9a83af4cd6897f05
+3	1462	6700304047540900	CMakeFiles/multithreading.dir/Matrix.cpp.obj	4295d78523ff249
+1463	1671	6700304049611876	multithreading.exe	9a83af4cd6897f05
+3	1059	6700307136078337	CMakeFiles/multithreading.dir/main.cpp.obj	39fbfff487f68ea9
+18	1752	6700307143084384	CMakeFiles/multithreading.dir/Matrix.cpp.obj	4295d78523ff249
+1753	2043	6700307145924863	multithreading.exe	9a83af4cd6897f05

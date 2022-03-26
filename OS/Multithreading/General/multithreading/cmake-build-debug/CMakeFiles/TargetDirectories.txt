@@ -1,0 +1,3 @@
+D:/programs/JetBrains/Toolbox/projects_clion/multithreading/cmake-build-debug/CMakeFiles/multithreading.dir
+D:/programs/JetBrains/Toolbox/projects_clion/multithreading/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/programs/JetBrains/Toolbox/projects_clion/multithreading/cmake-build-debug/CMakeFiles/rebuild_cache.dir
