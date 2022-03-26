@@ -1,0 +1,7 @@
+# ninja log v5
+0	628	1646150619223704887	Test/CMakeFiles/Test.dir/main.cpp.o	5dc9a1b1fe32bb95
+1	652	1646150619247038671	Number/CMakeFiles/Number.dir/number.cpp.o	8e8fabd1834aaaeb
+652	727	1646150619320373419	Number/libNumber.a	6b76653d15b2d3e4
+1	800	1646150619397041565	Vector/CMakeFiles/Vector.dir/vector.cpp.o	a1ce9513e5919ee7
+800	890	1646150619483709904	Vector/libVector.so	749fc811a46bdfd0
+890	990	1646150619583711833	Test/Test	dcaa645c9fb2199e

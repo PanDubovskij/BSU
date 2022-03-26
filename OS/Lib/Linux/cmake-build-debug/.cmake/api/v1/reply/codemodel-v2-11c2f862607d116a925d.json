@@ -1,0 +1,159 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Test",
+					"jsonFile" : "directory-Test-Debug-3fc60f65c6de5401f5db.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "Test",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "Number",
+					"jsonFile" : "directory-Number-Debug-c272a9dfe284ef7e3760.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "Number",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "Vector",
+					"jsonFile" : "directory-Vector-Debug-2f2608302215ed250a99.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "Vector",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "CLionProjects"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "Test",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "Number",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "Vector",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "Number::@b4829400bff78c6c841f",
+					"jsonFile" : "target-Number-Debug-d9b6ec2e3540daa25faa.json",
+					"name" : "Number",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Test::@c0a5cca43b8aa79eb50e",
+					"jsonFile" : "target-Test-Debug-ca4bef015c9e69927617.json",
+					"name" : "Test",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Vector::@711a2c0d59b1c1c6a0e9",
+					"jsonFile" : "target-Vector-Debug-8436348e8110f870e75d.json",
+					"name" : "Vector",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/jan/CLionProjects/cmake-build-debug",
+		"source" : "/home/jan/CLionProjects"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,11 @@
+/home/jan/CLionProjects/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/jan/CLionProjects/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/jan/CLionProjects/cmake-build-debug/Test/CMakeFiles/rebuild_cache.dir
+/home/jan/CLionProjects/cmake-build-debug/Test/CMakeFiles/edit_cache.dir
+/home/jan/CLionProjects/cmake-build-debug/Test/CMakeFiles/Test.dir
+/home/jan/CLionProjects/cmake-build-debug/Number/CMakeFiles/rebuild_cache.dir
+/home/jan/CLionProjects/cmake-build-debug/Number/CMakeFiles/edit_cache.dir
+/home/jan/CLionProjects/cmake-build-debug/Number/CMakeFiles/Number.dir
+/home/jan/CLionProjects/cmake-build-debug/Vector/CMakeFiles/edit_cache.dir
+/home/jan/CLionProjects/cmake-build-debug/Vector/CMakeFiles/rebuild_cache.dir
+/home/jan/CLionProjects/cmake-build-debug/Vector/CMakeFiles/Vector.dir
