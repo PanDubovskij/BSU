@@ -1,0 +1,9 @@
+l classical Opera 2 piano Bethoven
+c chanson Fantasier 3 Evdokimov 2000
+p pop Dream 4 Valery love
+l classical Ballet 3 guitar Unknown
+c chanson DontCry 3 Bumer 1980
+p pop Love 4 Valery love
+l classical Romantic 4 piano Bax
+c chanson ForYou 2 Stas 2002
+p pop Wait 4 Lolita dream

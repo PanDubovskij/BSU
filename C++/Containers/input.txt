@@ -1,0 +1,7 @@
+1 oval aster carnation chrysanthemum crocus daffodil dahlia
+2 circle daisy gladiolus hyacinth iris lily marguerite
+5 romb pansy peony phlox rose snapdragon tulip violet
+15 romb chrysanthemum crocus daffodil dahlia
+19 circle cornflower cowslip daisy dandelion
+8 oval phlox rose snapdragon pansy peony phlox
+7 circle lavender mallow poppy thistle wildrose
