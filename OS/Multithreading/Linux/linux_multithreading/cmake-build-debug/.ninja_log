@@ -1,0 +1,4 @@
+# ninja log v5
+0	815	1649453142768809071	CMakeFiles/linux_multithreading.dir/main.cpp.o	6975c7e02c311ca2
+1	1108	1649453143062141988	CMakeFiles/linux_multithreading.dir/Matrix.cpp.o	f5b18fa9480569d2
+1108	1302	1649453143255475046	linux_multithreading	8bc144aa22d3a79b
