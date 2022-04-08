@@ -1,0 +1,4 @@
+# ninja log v5
+1	2243	6711484449849968	CMakeFiles/win_multithreading.dir/main.cpp.obj	42fce7f8f52287eb
+3	2380	6711484451161359	CMakeFiles/win_multithreading.dir/Matrix.cpp.obj	9212ba7851e483fb
+2380	2549	6711484452871312	win_multithreading.exe	f865d1f200a9d81d
