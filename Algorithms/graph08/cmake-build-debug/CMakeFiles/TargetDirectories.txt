@@ -1,0 +1,3 @@
+D:/programs/JetBrains/Toolbox/projects_clion/graph08/cmake-build-debug/CMakeFiles/graph08.dir
+D:/programs/JetBrains/Toolbox/projects_clion/graph08/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/programs/JetBrains/Toolbox/projects_clion/graph08/cmake-build-debug/CMakeFiles/rebuild_cache.dir
