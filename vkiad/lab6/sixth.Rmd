@@ -1,0 +1,127 @@
+---
+title: "Лабораторная работа №6. Моделирование. Дискриминантный анализ"
+mainfont: Arial
+monofont: Consolas
+output:
+  pdf_document: 
+    latex_engine: lualatex
+# Перед верстанием отчёта настоятельно рекомендуется изменить параметры. Более подробная информация по ним представлена в комментариях ниже.
+params: 
+    surname: "Dubovskij"
+    name: "Jan"
+    variant: "N/A"
+---
+
+<!-- Ниже расположены два блока с программным кодом, который выводит фамилию и имя студента, а также номер варианта. Они определяются параметрами surname, name и variant, объявленными в преамбуле, расположенной выше. К параметрам в коде можно обращаться через конструкцию params$var, где var - название переменной --> 
+
+<!-- Значения этих параметров можно поменять непосредственно в самом файле или используя опцию "Knit with Parameters..." -->
+
+<!-- Параметр echo=FALSE означает, что в отчёте сам код представлен не будет, будет выведен только результат его выполнения (в данном случае - вывод имени студента и номера варианта) -->
+
+**Студент:**
+
+```{r, echo=FALSE}
+cat(params$surname, params$name)
+```
+
+**Вариант**
+
+```{r, echo=FALSE}
+cat(params$variant)
+```
+
+## Генерация случайных данных
+
+<!-- Сгенерируйте согласно Вашему варианту случайные данные и выведите их -->
+
+```{r}
+dat_1 = cbind(rnorm(20, 0 , 9 / 3), rnorm(20, 0 ,  9 /3))
+dat_2 = cbind(rnorm(10, 9 , 9 / 3), rnorm(10, 9 ,  9 /3))
+dat = rbind(dat_1, dat_2)
+dat
+```
+
+## Построение истинной классификации
+
+<!-- Проведите кластеризацию Ваших данных на 2 кластера. Результат кластеризации отразите на диаграмме рассеяния. -->
+
+```{r dev='png'}
+cl = kmeans(scale(dat), 2)
+sapply(1:2, function(i) cl$centers[,i] * sd(dat[,i]) + mean(dat[,i]))
+plot(dat, col = c("blue", "green")[cl$cluster], pch = 20, cex = 2, xlab = "X", ylab = "Y", main = "2 clusters")
+legend("bottomleft", legend = c("1", "2"), fill = c("blue", "green"))
+
+```
+
+## Дискриминантный анализ с использованием верной классификации
+
+<!-- Проведите дискриминантный анализ, выбрав 70% наблюдений в качестве обучающей выборки. Вычислите долю неверно классифицированных данных среди элементов тестовой выборки. Результаты отразите на диаграмме рассеяния (смотрите памятку). -->
+
+```{r dev='png'}
+library("MASS")
+#Дискриминантный анализ № 1
+n = length(dat[,1])
+
+n.train = floor(n * 0.7)
+n.test = n - n.train
+
+idx.train = sample(1:n, n.train) 
+data.train = dat[idx.train, ]
+idx.test = setdiff(1:n, idx.train)
+data.test = dat[idx.test, ]
+
+
+cl.train = factor(cl[["cluster"]][idx.train])
+cl.test = factor(cl[["cluster"]][idx.test])
+
+#Обучение полученой тестовой выборки
+mod = qda(data.train, cl.train)
+cl.test_est = predict(mod, data.test)$class
+
+#Оценка ошибки классификации
+sum(cl.test_est != cl.test) / n.test
+idx.wrong = idx.test[cl.test_est != cl.test] 
+
+#Строим первый график
+plot(dat, col = c("blue", "green")[cl$cluster], pch = 20, cex = 2, xlab = "X", ylab = "Y", main = "plot_1")
+legend("topleft", legend = c("1", "2"), fill = c("blue", "green"))
+points(dat[idx.wrong, 1], dat[idx.wrong, 2], col = "red", pch = 4, cex = 2, lwd = 3) 
+points(dat[idx.train,],pch = 2, cex = 2)
+
+```
+
+## Дискриминантный анализ с использованием неверной классификации
+
+<!-- Проведите дискриминантный анализ для таких же обучающей и тестовой выборок. Для 20% элементов обучающей выборки поменяйте кластер. Вычислите долю неверно классифицированных данных среди элементов тестовой выборки. Результаты отразите на диаграмме рассеяния (смотрите памятку). -->
+
+```{r dev='png'}
+#Меняем номер кластера в 20% выборки
+idx.new = sample(1:n, n*0.2)
+for (i in 1:length(idx.new)) {
+  if(cl[["cluster"]][idx.new[i]] == 1){
+    cl[["cluster"]][idx.new[i]] = 2}
+  else{
+    cl[["cluster"]][idx.new[i]] = 1
+  }
+}
+
+
+#Дискриминантный анализ № 2
+cl_train = factor(cl[["cluster"]][idx.train])
+cl_test = factor(cl[["cluster"]][idx.test])
+
+#Обучение полученой тестовой выборки
+mod2 = qda(data.train, cl.train)
+cl.test_est2 = predict(mod2, data.test)$class
+
+#Оценка ошибки классификации
+sum(cl.test_est2 != cl.test) / n.test
+idx.wrong2 = idx.test[cl.test_est2 != cl.test] 
+
+#Строим второй график
+plot(dat, col = c("blue", "green")[cl$cluster], pch = 20, cex = 2, xlab = "X", ylab = "Y", main = "plot_2")
+legend("topleft", legend = c("1", "2"), fill = c("blue", "green"))
+points(dat[idx.wrong2, 1], dat[idx.wrong2, 2], col = "red", pch = 4, cex = 2, lwd = 3)
+points(dat[idx.new, ], pch = 3, cex = 2, lwd = 2)
+
+```
