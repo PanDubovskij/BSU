@@ -20,7 +20,7 @@ import java.time.format.FormatStyle;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class SimpleFrame extends JFrame {
+public class MyClass extends JFrame {
     private final Locale[] locales = {Locale.US, Locale.ITALY};
     private Locale currentLocale;
     private final JComboBox<Locale> localeCombo;
@@ -34,9 +34,9 @@ public class SimpleFrame extends JFrame {
     private final JMenuItem saveAsFile;
     private final JLabel currencyLabel;
     private final JLabel dateLabel;
-    private final JLabel classLabel;
-    private final JLabel classDescriptionLabel;
-    private final JTextField currencyField;
+//    private final JLabel classLabel;
+//    private final JLabel classDescriptionLabel;
+//    private final JTextField currencyField;
     private final JTextField dateField;
     private final JTextField classField;
     private final JTextArea classDescriptionArea;
@@ -46,22 +46,22 @@ public class SimpleFrame extends JFrame {
     private final ClassDescriptionController controller;
     private boolean isFileSaved;
 
-    public SimpleFrame() {
+    public MyClass() {
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE); //ghffdg
 
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 if (!isFileSaved) {
-                    int confirm = JOptionPane.showOptionDialog(null, "Do you want to save the file before closing?", "Exit Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
-                    if (confirm == 0) {
+                    int confirm = JOptionPane.showOptionDialog(null, "Do you want to s//ave the file before closing?", "Exit Confirmation", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+//                    if (confirm == 0) {
                         if (showSaveFileDialog() != JFileChooser.APPROVE_OPTION) {
                             return;
                         }
                         System.exit(0);
-                    }
-                    if (confirm == 1) {
-                        System.exit(0);
+//                    }
+//                    if (confirm == 1) {
+//                        System.exit(0);
                     }
                 } else {
                     System.exit(0);
@@ -74,13 +74,13 @@ public class SimpleFrame extends JFrame {
         controller = new ClassDescriptionController();
 
         menuBar = new JMenuBar();
-        file = new JMenu("File");
-        saveAsFile = new JMenuItem("Save As...");
+//        file = new JMenu("File");
+//        saveAsFile = new JMenuItem("Save As...");
         saveAsFile.setEnabled(false);
         saveAsFile.addActionListener(e -> showSaveFileDialog());
         file.add(saveAsFile);
         menuBar.add(file);
-
+//
         currencyLabel = new JLabel("Currency:");
         currencyField = new JTextField("$5,000.00");
 
@@ -110,12 +110,12 @@ public class SimpleFrame extends JFrame {
         setJMenuBar(menuBar);
         getDescriptionButton.setEnabled(false);
         classField.addKeyListener(new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
+//            @Override
+//            public void keyTyped(KeyEvent e) {
+//            }
+//
+//            @Override
+//            public void keyPressed(KeyEvent e) {
             }
 
             @Override
@@ -131,8 +131,8 @@ public class SimpleFrame extends JFrame {
                 saveAsFile.setEnabled(!classDescriptionArea.getText().isEmpty());
                 isFileSaved = false;
             } catch (Exception exception) {
-                JOptionPane.showMessageDialog(null, "You entered wrong format of data, please try again", "Attention!", JOptionPane.ERROR_MESSAGE);
-
+//                JOptionPane.showMessageDialog(null, "You entered wrong format of data, please try again", "Attention!", JOptionPane.ERROR_MESSAGE);
+//
             }
 
         });
@@ -145,10 +145,10 @@ public class SimpleFrame extends JFrame {
             validate();
         });
 
-    }
-
-    private int showSaveFileDialog() {
-        var fileChooser = new JFileChooser();
+//    }
+//
+//    private int showSaveFile//Dialog() {
+//        var fileChooser = new JFileChooser();
         fileChooser.setSelectedFile(new File(classDescription.getClassName()));
         int option = fileChooser.showSaveDialog(this);
         if (option == JFileChooser.APPROVE_OPTION) {

@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
 public class ClassDescription {
-    private String className;
+    private final String className;
     private String classDescription;
 
     public ClassDescription(String className) {
@@ -88,6 +88,10 @@ public class ClassDescription {
         return strb.toString();
     }
 
+
+    public String getClassName() {
+        return className;
+    }
 
     public String getClassDescription() {
         return classDescription;

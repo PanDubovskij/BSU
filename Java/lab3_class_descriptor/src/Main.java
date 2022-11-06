@@ -6,10 +6,26 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.util.Locale;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
+        /*DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM).localizedBy(Locale.US);
+        LocalDate date = LocalDate.parse("Jan 12, 1952",formatter);
+        System.out.println(date);
+        formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM).localizedBy(Locale.ITALY);
+        System.out.println(formatter.format(date));*/
+        /*NumberFormat format = NumberFormat.getCurrencyInstance(Locale.US);
+        Number number = format.parse("$5,600");
+        System.out.println(number.doubleValue());*/
         SimpleFrame simpleFrame = new SimpleFrame();
+        simpleFrame.pack();
+        simpleFrame.setVisible(true);
 //        String name = "java.lang.Integer";
 //        Class cl;
 //        try {
